@@ -4,6 +4,9 @@ $('#movie').change(function() {
   clearOptions($('#biographs'));
   clearOptions($('#times'));
 
+  hideElement($('#biographs'));
+  hideElement($('#times'));
+
   $.get('/movie/' + movie_id + '/biographs', function (res) {
     var data = $.parseJSON(res);
 
@@ -19,6 +22,8 @@ $('#movie').change(function() {
       }));
     });
   })
+
+  showElement($('#biographs'));
 });
 
 $('#biographs').change(function() {
@@ -37,6 +42,8 @@ $('#biographs').change(function() {
       }));
     })
   });
+
+  showElement($('#times'));
 });
 
 $('#cinemas').change(function() {
@@ -44,6 +51,9 @@ $('#cinemas').change(function() {
 
   clearOptions($('#movies'));
   clearOptions($('#showings'));
+
+  hideElement($('#movies'));
+  hideElement($('#showings'));
 
   $.get('/cinema/' + cinema_id + '/movies', function(res) {
     var data = $.parseJSON(res);
@@ -55,6 +65,8 @@ $('#cinemas').change(function() {
       }))
     });
   });
+
+  showElement($('#movies'));
 });
 
 $('#movies').change(function() {
@@ -73,6 +85,8 @@ $('#movies').change(function() {
       }))
     });
   });
+
+  showElement($('#showings'));
 });
 
 function clearOptions(element) {
