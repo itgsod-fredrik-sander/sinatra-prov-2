@@ -7,5 +7,11 @@ $('#movie').change(function() {
     if (data.length < 0)
       return;
 
+    console.log(data);
+
+    var biographs = $('<select>').appendTo('body');
+    $(data).each(function() {
+    });
+
   })
 });
