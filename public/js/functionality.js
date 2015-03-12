@@ -41,6 +41,9 @@ $('#biographs').change(function() {
 
 $('#cinemas').change(function() {
   var cinema_id = $(this).val().toString();
+
+  clearOptions($('#movies'));
+  clearOptions($('#showings'));
 });
 
 function clearOptions(element) {
