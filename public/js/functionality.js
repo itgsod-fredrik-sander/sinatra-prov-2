@@ -27,7 +27,10 @@ $('#biographs').change(function() {
     var data = $.parseJSON(res);
 
     $(data).each(function() {
-
+      $('#times').append($('<option>', {
+        value: this.id,
+        text: this.start_time
+      }));
     })
   });
 });
