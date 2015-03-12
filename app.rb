@@ -25,6 +25,6 @@ class App < Sinatra::Base
   end
 
   get '/cinema/:cinema_id/movies/:movie_id/showings' do |cinema_id, movie_id|
-    Cinema.get(cinema_id).showings.movies.all(:id => movie_id)
+    Cinema.get(cinema_id).showings.all(:movie_id => movie_id).to_json
   end
 end
