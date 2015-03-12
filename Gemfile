@@ -11,6 +11,7 @@ gem 'data_mapper'
 gem 'slim'
 gem 'tilt', '~> 1.4.1' #temporary fix
 gem 'racksh'
+gem 'json'
 
 # Used during local development (on your own machine)
 group :development do
