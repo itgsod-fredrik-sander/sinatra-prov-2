@@ -78,3 +78,11 @@ $('#movies').change(function() {
 function clearOptions(element) {
   element.empty();
 }
+
+function hideElement(element) {
+  element.css('visibility', 'hidden');
+}
+
+function showElement(element) {
+  element.css('visibility', 'visible');
+}
