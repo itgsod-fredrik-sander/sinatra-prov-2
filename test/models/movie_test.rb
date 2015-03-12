@@ -7,8 +7,8 @@ describe Movie do
 
   describe 'associations' do 
 
-    it 'should return the correct showing time' do 
-      expect (@movie.showings.first.start_time).to match '2015-03-13T21:15:00+00:00'
+    it 'should not work' do 
+      expect (@movie.showings.first.start_time).to match '2015-03-13T21:15:00+00:00 + 50'
     end
 
   end
