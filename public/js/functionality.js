@@ -15,6 +15,11 @@ $('#movie').change(function() {
         text: this.name
       }));
     });
-
   })
+});
+
+$('#biographs').change(function() {
+
+  var movie_id = $('#movie').val().toString();
+  var biograph_id = $(this).val().toString();
 });
