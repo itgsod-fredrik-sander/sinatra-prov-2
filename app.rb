@@ -18,7 +18,9 @@ class App < Sinatra::Base
 
   get '/cinema/:id/movies' do |id|
     showings = Cinema.get(1).showings
-    movies = showings.map {|showing| Movie.get(showing.movie_id)}
-    movies.unique {|movie| movie.id}
+    movies = []
+
+    showings.each {|showing| movies << Movie.get(showing.movie_id)}
+    movies.uniq {|movie| movie.id}.to_json
   end
 end
