@@ -3,6 +3,7 @@ class App < Sinatra::Base
 
   get '/' do 
     @movies = Movie.all
+    @cinemas = Cinema.all
 
     slim :index
   end
