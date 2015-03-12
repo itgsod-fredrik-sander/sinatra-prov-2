@@ -14,5 +14,7 @@ html
     select id='cinemas'
       - for cinema in @cinemas
         option value='#{cinema.id}' #{cinema.name} 
+    select id='movies'
+    select id='showings'
 
     script src='js/functionality.js'
