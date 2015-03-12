@@ -22,4 +22,12 @@ $('#biographs').change(function() {
 
   var movie_id = $('#movie').val().toString();
   var biograph_id = $(this).val().toString();
+
+  $.get('/movie/' + movie_id + '/biographs/' + biograph_id + '/showings', function(res) {
+    var data = $.parseJSON(res);
+
+    $(data).each(function() {
+
+    })
+  });
 });
