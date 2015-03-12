@@ -1,6 +1,7 @@
 class Room
   include DataMapper::Resource
 
+  property :id, Serial
   property :name, String
   property :number_of_seats, Integer
 
