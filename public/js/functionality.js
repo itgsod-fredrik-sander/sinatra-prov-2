@@ -57,6 +57,12 @@ $('#cinemas').change(function() {
   });
 });
 
+$('#movies').change(function() {
+  var movie_id = $(this).val().toString();
+
+  clearOptions($('#showings'));
+});
+
 function clearOptions(element) {
   element.empty();
 }
