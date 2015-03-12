@@ -5,4 +5,5 @@ class Cinema
   property :name, String
 
   has n, :rooms
+  has n, :showings
 end

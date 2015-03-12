@@ -6,4 +6,5 @@ class Showing
 
   belongs_to :movie
   belongs_to :room
+  belongs_to :cinema
 end
