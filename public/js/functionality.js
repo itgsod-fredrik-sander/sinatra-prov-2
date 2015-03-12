@@ -58,9 +58,21 @@ $('#cinemas').change(function() {
 });
 
 $('#movies').change(function() {
+  var cinema_id = $('#cinemas').val().toString();
   var movie_id = $(this).val().toString();
 
   clearOptions($('#showings'));
+
+  $.get('/cinema/' + cinema_id + '/movies/' + movie_id + '/showings', function(res) {
+    var data = $.parseJSON(res);
+
+    $(data).each(function() {
+      $('#showings').append($('<option>', {
+        value: this.id,
+        text: this.start_time
+      }))
+    });
+  });
 });
 
 function clearOptions(element) {
