@@ -1,4 +1,4 @@
-# The first four code sections below takes care of hiding, showing and updating values of the selectors on the website
+// The first four code sections below takes care of hiding, showing and updating values of the selectors on the website
 
 $('#movie').change(function() {
   var movie_id = $(this).val().toString(); 
@@ -91,43 +91,43 @@ $('#movies').change(function() {
   showElement($('#showings'));
 });
 
-# Public: clearOptions from element
-#
-# element - the element the options will be cleared from
-#
-# Examples
-#
-#   clearOptions($(#options));
-#
-# Clears the options from the element
+// Public: clearOptions from element
+//
+// element - the element the options will be cleared from
+//
+// Examples
+//
+//   clearOptions($(#options));
+//
+// Clears the options from the element
 
 function clearOptions(element) {
   element.empty();
 }
 
-# Public: hides element from website
-#
-# element - the element to be hidden
-#
-# Examples
-#
-#   hideElement($(#options));
-#
-# Hides the element
+// Public: hides element from website
+//
+// element - the element to be hidden
+//
+// Examples
+//
+//   hideElement($(#options));
+//
+// Hides the element
 
 function hideElement(element) {
   element.css('visibility', 'hidden');
 }
 
-# Public: makes the element visible on the website
-#
-# element - the element to be visible
-#
-# Examples
-#
-#   hideElement($(#options));
-#
-# Makes the element visible
+// Public: makes the element visible on the website
+//
+// element - the element to be visible
+//
+// Examples
+//
+//   hideElement($(#options));
+//
+// Makes the element visible
 
 function showElement(element) {
   element.css('visibility', 'visible');
