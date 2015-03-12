@@ -3,6 +3,5 @@ $('#movie').change(function() {
 
   $.get('/movies/' + movie_id, function (res) {
     var data = $.parseJSON(res);
-    loadPath(data, 0);
   });
 });
