@@ -44,6 +44,10 @@ $('#cinemas').change(function() {
 
   clearOptions($('#movies'));
   clearOptions($('#showings'));
+
+  $.get('/cinema/' + cinema_id + '/movies', function(res) {
+    var data = $.parseJSON(res);
+  });
 });
 
 function clearOptions(element) {
