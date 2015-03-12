@@ -3,4 +3,6 @@ class Cinema
 
   property :id, Serial
   property :name, String
+
+  has n, :rooms
 end
