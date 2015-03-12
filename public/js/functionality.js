@@ -47,6 +47,13 @@ $('#cinemas').change(function() {
 
   $.get('/cinema/' + cinema_id + '/movies', function(res) {
     var data = $.parseJSON(res);
+
+    $(data).each(function() {
+      $('#movies').append($('<option>', {
+        value: this.id,
+        text: this.name
+      }))
+    });
   });
 });
 
