@@ -23,4 +23,8 @@ class App < Sinatra::Base
     showings.each {|showing| movies << Movie.get(showing.movie_id)}
     movies.uniq {|movie| movie.id}.to_json
   end
+
+  get '/cinema/:cinema_id/movies/:movie_id/showings' do |cinema_id, movie_id|
+    Cinema.get(cinema_id).showings.movies.all(:id => movie_id)
+  end
 end
