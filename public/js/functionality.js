@@ -34,3 +34,7 @@ $('#biographs').change(function() {
     })
   });
 });
+
+function clearOptions(element) {
+  element.remove('<option>');
+}
