@@ -9,8 +9,11 @@ $('#movie').change(function() {
 
     console.log(data);
 
-    var biographs = $('<select>').appendTo('body');
     $(data).each(function() {
+      $('#biographs').append($('<option>', {
+        value: this.id,
+        text: this.name
+      }));
     });
 
   })
