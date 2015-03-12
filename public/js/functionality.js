@@ -3,5 +3,9 @@ $('#movie').change(function() {
 
   $.get('/movie/' + movie_id + '/biographs', function (res) {
     var data = $.parseJSON(res);
+
+    if (data.length < 0)
+      return;
+
   })
 });
