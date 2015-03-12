@@ -4,4 +4,6 @@ class Movie
   property :id, Serial
   property :name, Serial
   property :runtime, Integer
+
+  has n, :showings
 end

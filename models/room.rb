@@ -5,4 +5,5 @@ class Room
   property :number_of_seats, Integer
 
   belongs_to :cinema
+  has n, :showings
 end
