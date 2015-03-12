@@ -39,6 +39,10 @@ $('#biographs').change(function() {
   });
 });
 
+$('#cinemas').change(function() {
+  var cinema_id = $(this).val().toString();
+});
+
 function clearOptions(element) {
   element.empty();
 }
