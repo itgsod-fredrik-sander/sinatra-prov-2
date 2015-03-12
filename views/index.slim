@@ -1,1 +1,3 @@
-h1 Hello
+select
+  - for movie in @movies
+    option value='#{movie.name}' #{movie.name}
