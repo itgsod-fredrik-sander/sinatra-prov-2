@@ -1,3 +1,3 @@
-class Cinema
+class Showing
   include DataMapper::Resource
 end

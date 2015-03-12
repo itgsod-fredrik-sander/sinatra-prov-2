@@ -1,3 +1,3 @@
-class Cinema
+class Room
   include DataMapper::Resource
 end
