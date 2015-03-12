@@ -1,6 +1,9 @@
 $('#movie').change(function() {
   var movie_id = $(this).val().toString(); 
 
+  clearOptions($('#biographs'));
+  clearOptions($('#times'));
+
   $.get('/movie/' + movie_id + '/biographs', function (res) {
     var data = $.parseJSON(res);
 
@@ -36,5 +39,5 @@ $('#biographs').change(function() {
 });
 
 function clearOptions(element) {
-  element.remove('<option>');
+  element.empty();
 }
